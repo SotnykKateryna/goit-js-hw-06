@@ -6,7 +6,7 @@ const onTextInput = (event) => {
     if (inputEl.value === "") {
         outputEl.textContent = 'Anonymous';
     } else {
-        outputEl.textContent = event.target.value;
+        outputEl.textContent.trim() = event.target.value;
     }
 }
 

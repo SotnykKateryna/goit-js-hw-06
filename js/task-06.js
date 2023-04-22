@@ -10,11 +10,11 @@ const onTextInput = (event) => {
     console.log(symbolLength);
 
   if (symbolLength === dataLength) {
-    inputEl.classList.add('valid');
-    inputEl.classList.remove('invalid');
+    inputEl.classList.trim().add('valid');
+    inputEl.classList.trim().remove('invalid');
    } else {
-    inputEl.classList.add('invalid');
-    inputEl.classList.remove('valid');
+    inputEl.classList.trim().add('invalid');
+    inputEl.classList.trim().remove('valid');
   }
 }
 
