@@ -2,19 +2,19 @@ const inputEl = document.querySelector("#validation-input");
 // console.log(inputEl);
 
 const dataLength = Number(inputEl.getAttribute("data-length"));
-console.log(dataLength);
+// console.log(dataLength);
 
 
 const onTextInput = (event) => {
-    const symbolLength = event.target.value.length;
+    const symbolLength = event.target.value.trim().length;
     console.log(symbolLength);
 
   if (symbolLength === dataLength) {
-    inputEl.classList.trim().add('valid');
-    inputEl.classList.trim().remove('invalid');
+    inputEl.classList.add('valid');
+    inputEl.classList.remove('invalid');
    } else {
-    inputEl.classList.trim().add('invalid');
-    inputEl.classList.trim().remove('valid');
+    inputEl.classList.add('invalid');
+    inputEl.classList.remove('valid');
   }
 }
 
